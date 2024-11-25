@@ -1,0 +1,19 @@
+.custom_btn{
+    width: 70%;
+    color: rgb(255, 255, 255) !important;
+    
+}
+.page_color{
+    background-color: rgb(248, 255, 217) !important;
+    height: 100%;
+}
+
+h1{
+    font-size: 100px;
+    text-align: center;
+}
+
+h2{
+    font-size: 20px;
+    text-align: center; 
+}

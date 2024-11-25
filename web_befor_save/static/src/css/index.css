@@ -1,0 +1,21 @@
+.fixed-alert {
+    position: fixed;
+    left: 50%;
+    bottom: 50%;
+    /* transform: translateX(-50%);
+    background-color: #fff569a3;
+    color: black;
+    padding: 20px;
+    font-size: 16px;
+    border-radius: 5px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    z-index: 1000; */
+}
+.btn-primary_custom_oo {
+    background-color: #11ffaf;
+    color: #ffffff;
+    width: 20%;
+    font-weight: bolder;
+    right: 0px;
+}
+

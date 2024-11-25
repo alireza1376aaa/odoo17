@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Template for the Advanced Dashboard -->
+<templates id="template" xml:space="preserve">
+<t t-name="client_action.advanced_dashboard">
+    	<div class='page_color'>
+        	<h1><center><span>Helllllo Akam</span></center></h1>
+			<center><button t-on-click="loadData" class="btn btn-primary custom_btn">action</button></center>
+						<div id="action-message"><h2 id="new_action"></h2></div>
+
+			<center><button t-on-click="showSalam" class="btn btn-primary custom_btn">Click Me</button></center>
+						<div id="salam-message"></div>
+    	</div>
+<!--	You can add the templates here-->
+	</t>
+</templates>

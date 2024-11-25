@@ -1,0 +1,60 @@
+<odoo>
+  <data>
+    <!-- explicit list view definition -->
+
+    <record model="ir.ui.view" id="befor_save.list">
+      <field name="name">befor_save list</field>
+      <field name="model">befor_save.befor_save</field>
+      <field name="arch" type="xml">
+        <tree>
+          <field name="name"/>
+          <field name="value"/>
+          <field name="value2"/>
+        </tree>
+      </field>
+    </record>
+
+
+    <!-- actions opening views on models -->
+
+    <record model="ir.actions.act_window" id="befor_save.action_window">
+      <field name="name">befor_save window</field>
+      <field name="res_model">befor_save.befor_save</field>
+      <field name="view_mode">tree,form</field>
+    </record>
+
+
+    <!-- server action to the one above -->
+
+    <record model="ir.actions.server" id="befor_save.action_server">
+      <field name="name">befor_save server</field>
+      <field name="model_id" ref="model_befor_save_befor_save"/>
+      <field name="state">code</field>
+      <field name="code">
+        action = {
+          "type": "ir.actions.act_window",
+          "view_mode": "tree,form",
+          "res_model": model._name,
+        }
+      </field>
+    </record>
+
+
+    <!-- Top menu item -->
+
+    <menuitem name="befor_save" id="befor_save.menu_root" web_icon="befor_save,static/description/icon.png"/>
+
+    <!-- menu categories -->
+
+    <menuitem name="Menu 1" id="befor_save.menu_1" parent="befor_save.menu_root"/>
+    <menuitem name="Menu 2" id="befor_save.menu_2" parent="befor_save.menu_root"/>
+
+    <!-- actions -->
+
+    <menuitem name="List" id="befor_save.menu_1_list" parent="befor_save.menu_1"
+              action="befor_save.action_window"/>
+    <menuitem name="Server to list" id="befor_save" parent="befor_save.menu_2"
+              action="befor_save.action_server"/>
+
+  </data>
+</odoo>

@@ -1,0 +1,123 @@
+<odoo>
+  <data>
+    <!-- explicit list view definition -->
+
+
+    <record model="ir.ui.view" id="task_qumi_button.list">
+          <field name="name">List_major</field>
+          <field name="model">task_qumi_button.major</field>
+          <field name="arch" type="xml">
+            <tree>
+              <field name="majorname"/>
+              <field name="student_selector"/>
+            </tree>
+          </field>
+        </record>
+
+        <record id="major_form" model="ir.ui.view">
+          <field name="name">Form_major</field>
+          <field name="model">task_qumi_button.major</field>
+          <field name="arch" type="xml">
+            <form string="" data_changed="1">
+              <sheet>
+                <group>
+                    <field name="majorname"/>
+                    <field name="student_selector"/>
+                </group>
+              </sheet>
+            </form>
+          </field>
+        </record>
+
+
+
+       <record id="view_quotation_tree_with_onboarding" model="ir.ui.view">
+       <field name="name">slalm</field>
+       <field name="model">task_qumi_button.major</field>
+       <field name="inherit_id" ref="task_qumi_button.list"/>
+       <field name="arch" type="xml">
+           <xpath expr="//tree" position="attributes">
+               <attribute name="js_class">button_in_tree</attribute>
+           </xpath>
+       </field>
+        </record>
+
+
+        <record model="ir.ui.view" id="task_qumi_button.list_student">
+          <field name="name">List_student</field>
+          <field name="model">task_qumi_button.student</field>
+          <field name="arch" type="xml">
+            <tree>
+              <field name="name"/>
+              <field name="major_selector"/>
+            </tree>
+          </field>
+        </record>
+
+        <record id="student_form" model="ir.ui.view">
+          <field name="name">Form_student</field>
+          <field name="model">task_qumi_button.student</field>
+          <field name="arch" type="xml">
+            <form string="" data_changed="1">
+              <sheet>
+                <group>
+                    <field name="name"/>
+                    <field name="age"/>
+                    <field name="value2"/>
+                    <field name="description"/>
+                    <field name="major_selector"/>
+                </group>
+              </sheet>
+            </form>
+          </field>
+        </record>
+
+    <!-- actions opening views on models -->
+
+    <record model="ir.actions.act_window" id="task_qumi_button.action_window_major">
+      <field name="name">major</field>
+      <field name="res_model">task_qumi_button.major</field>
+      <field name="view_mode">tree,form</field>
+    </record>
+
+    <record model="ir.actions.act_window" id="task_qumi_button.action_window_student">
+          <field name="name">student</field>
+          <field name="res_model">task_qumi_button.student</field>
+          <field name="view_mode">tree,form</field>
+    </record>
+    
+      <record id="advanced_dashboard_action" model="ir.actions.client">
+          <field name="name">Advanced Dashboard</field>
+          <field name="tag">advanced_dashboard</field>
+      </record>
+
+    <!-- server action to the one above -->
+
+    <record model="ir.actions.server" id="task_qumi_button.action_server">
+      <field name="name">task_qumi_button server</field>
+      <field name="model_id" ref="model_task_qumi_button_student"/>
+      <field name="state">code</field>
+      <field name="code">
+        action = {
+          "type": "ir.actions.act_window",
+          "view_mode": "tree,form",
+          "res_model": model._name,
+        }
+      </field>
+    </record>
+
+
+    <!-- Top menu item -->
+
+    <menuitem name="task_qumi_button" id="task_qumi_button.menu_root"/>
+
+    <!-- menu categories -->
+
+    <menuitem name="major" id="task_qumi_button.menu_1" parent="task_qumi_button.menu_root" action="task_qumi_button.action_window_major"/>
+    <menuitem name="student" id="task_qumi_button.menu_2" parent="task_qumi_button.menu_root" action="task_qumi_button.action_window_student"/>
+	  <menuitem name="new_menue" id="advanced_dashboard_menu" parent="task_qumi_button.menu_root" action="advanced_dashboard_action"/>
+
+    <!-- actions -->
+
+  </data>
+</odoo>

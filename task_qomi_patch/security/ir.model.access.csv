@@ -1,0 +1,2 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+access_task_qomi_patch_task_qomi_patch,task_qomi_patch.task_qomi_patch,model_task_qomi_patch_task_qomi_patch,base.group_user,1,1,1,1

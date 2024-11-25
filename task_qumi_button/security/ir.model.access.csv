@@ -1,0 +1,3 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+access_task_qumi_button_student,task_qumi_button.student,model_task_qumi_button_student,base.group_user,1,1,1,1
+access_task_qumi_button_major,task_qumi_button.major,model_task_qumi_button_major,base.group_user,1,1,1,1

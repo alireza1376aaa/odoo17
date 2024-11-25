@@ -1,0 +1,82 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* web_befor_save
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 17.0+e-20240724\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2024-09-21 20:28+0000\n"
+"PO-Revision-Date: 2024-09-21 20:28+0000\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: web_befor_save
+#: model:ir.model,name:web_befor_save.model_base
+msgid "Base"
+msgstr "پایه"
+
+#. module: web_befor_save
+#: model:ir.model,name:web_befor_save.model_res_partner
+msgid "Contact"
+msgstr "مخاطب"
+
+#. module: web_befor_save
+#: model:ir.model,name:web_befor_save.model_hr_employee
+msgid "Employee"
+msgstr "کارمند"
+
+#. module: web_befor_save
+#. odoo-python
+#: code:addons/web_befor_save/models/contact.py:0
+#, python-format
+msgid "This Phone exists, Cant be saved"
+msgstr "این شماره تماس قبلا ذخیره شده است"
+
+#. module: web_befor_save
+#. odoo-python
+#: code:addons/web_befor_save/models/contact.py:0
+#: code:addons/web_befor_save/models/employee.py:0
+#: code:addons/web_befor_save/models/resuser.py:0
+#, python-format
+msgid "This name exists, should it be saved?"
+msgstr "این اسم موجود است آیا ذخیره شود؟"
+
+#. module: web_befor_save
+#: model:ir.model,name:web_befor_save.model_res_users
+msgid "User"
+msgstr "کاربر"
+
+#. module: web_befor_save
+#. odoo-python
+#: code:addons/web_befor_save/models/contact.py:0
+#: code:addons/web_befor_save/models/employee.py:0
+#: code:addons/web_befor_save/models/resuser.py:0
+#, python-format
+msgid "You can edit again"
+msgstr "می توانید دوباره ویرایش کنید"
+
+#. module: web_befor_save
+#. odoo-javascript
+#: code:addons/web_befor_save/static/src/js/custom_form.js:0
+#, python-format
+msgid "don't save"
+msgstr "عدم ذخیره"
+
+#. module: web_befor_save
+#. odoo-javascript
+#: code:addons/web_befor_save/static/src/js/custom_form.js:0
+#, python-format
+msgid "save"
+msgstr "ذخیره"
+
+#. module: web_befor_save
+#. odoo-javascript
+#: code:addons/web_befor_save/static/src/js/custom_form.js:0
+#, python-format
+msgid "warning"
+msgstr "هشدار"
